@@ -110,6 +110,14 @@
 
                             <div class="border-t border-gray-200 dark:border-gray-600"></div>
 
+                            <!--LOCK SCREEN-->
+                            <x-dropdown-link href="{{ route('lock-screen') }}">
+                                {{ __('Lock Screen') }}
+                            </x-dropdown-link>
+
+                            <div class="border-t border-gray-200 dark:border-gray-600"></div>
+
+
                             <!-- Authentication -->
                             <form method="POST" action="{{ route('logout') }}" x-data>
                                 @csrf

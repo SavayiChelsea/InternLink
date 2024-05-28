@@ -26,6 +26,20 @@
                 <x-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
             </div>
 
+            <!-- Password Guidelines -->
+            <div class="mt-4">
+                <p class="text-sm text-white-600">
+                    {{ __('Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character.') }}
+                </p>
+                <ul class="text-sm text-white-600 list-disc pl-5 mt-1">
+                    <li>{{ __('At least 8 characters long') }}</li>
+                    <li>{{ __('At least one uppercase letter') }}</li>
+                    <li>{{ __('At least one lowercase letter') }}</li>
+                    <li>{{ __('At least one number') }}</li>
+                    <li>{{ __('At least one special character') }}</li>
+                </ul>
+            </div>
+
             <div class="flex items-center justify-end mt-4">
                 <x-button>
                     {{ __('Reset Password') }}

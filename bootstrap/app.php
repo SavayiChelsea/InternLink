@@ -12,7 +12,9 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        //
+        $middleware->alias([
+            'ensure.user.is.unlocked' => \App\Http\Middleware\EnsureUserIsUnlocked::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //

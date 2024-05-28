@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LockScreenController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -15,3 +16,10 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+
+// Routes for lock screen and unlock screen
+Route::get('/lock-screen', [LockScreenController::class, 'lock'])->name('lock-screen');
+Route::post('/unlock-screen', [LockScreenController::class, 'unlock'])->name('unlock-screen');
+
+
