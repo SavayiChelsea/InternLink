@@ -28,8 +28,8 @@
 
             <!-- Password Guidelines -->
             <div class="mt-4">
-                <p class="text-sm text-white-600">
-                    {{ __('Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character.') }}
+                <p class="text-sm text-red-600">
+                    {{ __('Password Guidelines!') }}
                 </p>
                 <ul class="text-sm text-white-600 list-disc pl-5 mt-1">
                     <li>{{ __('At least 8 characters long') }}</li>

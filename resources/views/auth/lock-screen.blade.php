@@ -33,6 +33,7 @@
         window.onpopstate = function () {
             window.history.forward();
         };
+        
     </script>
 
 </x-guest-layout>
