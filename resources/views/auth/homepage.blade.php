@@ -67,10 +67,14 @@
             @yield('content')
             <h5 data-aos="fade-right" data-aos-duration="1400">#Looking for an internship? Search no further</h5>
             <h1 data-aos="zoom-in-left" data-aos-duration="1400" data-aos-delay="200">Intern Link</h1>
-            <p data-aos="fade-right" data-aos-duration="1400" data-aos-delay="300">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, quae.</p>
+            <p data-aos="fade-right" data-aos-duration="1400" data-aos-delay="300">This website is your ultimate destination for finding the perfect internship opportunities. Whether you're a student looking to gain experience or an organization seeking talented interns, Intern Link connects you with endless possibilities. Start exploring today!</p>
 
             <div class="main-hero" data-aos="flip-down" data-aos-duration="1400" data-aos-delay="400">
-                <a href="#" class="btn">Start your journey now</a>
+                @auth
+                <a href="{{ route('internships') }}" class="btn">Start your journey now</a>
+            @else
+                <a href="{{ route('register') }}" class="btn">Start your journey now</a>
+            @endauth
 
             </div>
 
