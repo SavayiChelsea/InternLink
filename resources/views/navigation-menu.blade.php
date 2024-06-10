@@ -117,10 +117,10 @@
 
                             <div class="border-t border-gray-200 dark:border-gray-600"></div>
 
-                            
 
-                            <x-dropdown-link href="{{ route('homepage') }}">
-                                {{ __('homepage') }}
+
+                            <x-dropdown-link href="{{ route('home') }}">
+                                {{ __('home page') }}
                             </x-dropdown-link>
 
                             <div class="border-t border-gray-200 dark:border-gray-600"></div>
