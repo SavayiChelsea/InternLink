@@ -32,11 +32,13 @@
         </a>
         <ul class="navlist">
             <li><a href="{{ route('home') }}"> home</a></li>
+
             @if (Route::has('login'))
             @auth
+                <li><a href="{{ route('internships') }}">Internships</a></li>
                 <li><a href="{{ route('dashboard') }}">Dashboard</a></li>
             @else
-                <li><a href="{{ route('login') }}">Login</a></li>
+                <li><a href="{{ route('signin') }}">Login</a></li>
                 @if (Route::has('register'))
                     <li><a href="{{ route('register') }}">Register</a></li>
                 @endif
@@ -51,7 +53,7 @@
                     <button type="submit" class="nav-btn">Logout</button>
                 </form>
             @else
-                <a href="{{ route('login') }}" class="nav-btn">Sign in</a>
+                <a href="{{ route('login') }}" class="nav-btn">Log in</a>
                 @if (Route::has('register'))
                     <a href="{{ route('register') }}" class="nav-btn">Register</a>
                 @endif
