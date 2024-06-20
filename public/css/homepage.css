@@ -177,6 +177,93 @@ section{
     color: var(--main-color);
 }
 
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #000000, #0A1D37);
+    color: #fff;
+    margin: 10% auto; /* 10% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 500px; /* Ensure it doesn't get too large */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center; /* Center the text */
+}
+
+.close {
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.modal-content .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+}
+
+.modal-content button {
+    background-color: #0A1D37; /* Dark blue */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.modal-content button:hover {
+    background-color: #0c2c5a; /* Darker blue */
+}
+
+@media (max-width: 600px) {
+    .modal-content {
+        width: 95%; /* Responsive width */
+        margin: 20% auto; /* More space from top */
+    }
+
+    .modal-content .button-container {
+        flex-direction: column;
+    }
+
+    .modal-content button {
+        width: 100%; /* Full width buttons for smaller screens */
+        margin: 10px 0;
+    }
+}
+
+
+
 @media(max-width: 1770px){
     header{
         padding: 22px 4%;

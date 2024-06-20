@@ -11,8 +11,13 @@ class HomeController extends Controller
         return view('auth.internships');
     }
 
-    public function signin()
+    public function signinstudent()
     {
-        return view('auth.signin');
+        return view('auth.signinstudent');
     }
+    public function signinemployer()
+    {
+        return view('auth.signinemployer');
+    }
+
 }

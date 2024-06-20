@@ -24,5 +24,6 @@ Route::post('/unlock-screen', [LockScreenController::class, 'unlock'])->name('un
 
 // Routes for home page
 Route::get('/internships', [App\Http\Controllers\HomeController::class, 'internships'])->name('internships');
-Route::get('/signin', [App\Http\Controllers\HomeController::class, 'signin'])->name('signin');
+Route::get('/signinstudent', [App\Http\Controllers\HomeController::class, 'signinstudent'])->name('signin.student');
+Route::get('/signinemployer', [App\Http\Controllers\HomeController::class, 'signinemployer'])->name('signin.employer');
 

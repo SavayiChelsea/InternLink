@@ -38,9 +38,9 @@
                 <li><a href="{{ route('internships') }}">Internships</a></li>
                 <li><a href="{{ route('dashboard') }}">Dashboard</a></li>
             @else
-                <li><a href="{{ route('signin') }}">Login</a></li>
+                <li><a href="{{ route('signin.student') }}">Login</a></li>
                 @if (Route::has('register'))
-                    <li><a href="{{ route('register') }}">Register</a></li>
+                    <li><a href="{{ route('signin.student') }}" >Register</a></li>
                 @endif
             @endauth
         @endif
@@ -55,12 +55,51 @@
             @else
                 <a href="{{ route('login') }}" class="nav-btn">Log in</a>
                 @if (Route::has('register'))
-                    <a href="{{ route('register') }}" class="nav-btn">Register</a>
+                    <a href="#" class="nav-btn" id="registerLink" >Register</a>
                 @endif
             @endauth
         @endif
             <div class="bx bx-menu" id="menu-icon"></div>
         </div>
+
+        <!-- Modal -->
+        <!-- Modal -->
+    <div id="registerModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeRegisterModal()">&times;</span>
+            <p>Register as:</p>
+            <div class="button-container">
+                <button onclick="window.location.href='{{ route('signin.student') }}'">Student</button>
+                <button onclick="window.location.href='{{ route('signin.employer') }}'">Employer</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Added script to handle modal display -->
+    <script>
+        function showRegisterModal() {
+            document.getElementById('registerModal').style.display = "block";
+        }
+
+        function closeRegisterModal() {
+            document.getElementById('registerModal').style.display = "none";
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const registerLink = document.getElementById('registerLink');
+            registerLink.addEventListener('click', function(event) {
+                event.preventDefault();
+                showRegisterModal();
+            });
+
+            const registerHeroLink = document.getElementById('registerHeroLink');
+            registerHeroLink.addEventListener('click', function(event) {
+                event.preventDefault();
+                showRegisterModal();
+            });
+        });
+    </script>
+
     </header>
     <!--- hero --->
     <section class="hero">
@@ -75,7 +114,7 @@
                 @auth
                 <a href="{{ route('internships') }}" class="btn">Start your journey now</a>
             @else
-                <a href="{{ route('register') }}" class="btn">Start your journey now</a>
+                <a href="#" class="btn" id="registerHeroLink">Start your journey now</a>
             @endauth
             </div>
 

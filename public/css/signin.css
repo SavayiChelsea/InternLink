@@ -244,6 +244,24 @@
     pointer-events: all;
   }
 
+
+  form.sign-in-form.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+form.sign-up-form.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+form.sign-in-form:not(.active),
+form.sign-up-form:not(.active) {
+    opacity: 0;
+    z-index: 1;
+}
+
+
   @media (max-width: 870px) {
     .container {
       min-height: 800px;
