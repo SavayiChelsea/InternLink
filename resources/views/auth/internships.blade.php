@@ -20,46 +20,32 @@
 
     <div class="box">
         <div class="search-box">
-            <input type="text" placeholder="Type here...">
+            <input type="text" id="search-input" placeholder="Type here...">
+            <div id="autocomplete-list" class="autocomplete-suggestions"></div>
             <label for="" class="icon">
                 <i class="fas fa-search"></i>
             </label>
         </div>
-
-    <div class="internship-container">
-        <div class="internship">
-            <h3>Internship Title 1</h3>
-            <p>Company Name 1</p>
-            <p>Location 1</p>
-            <p>Duration: 3 months</p>
-            <button>Apply Now</button>
+        <div class="internship-container" id="internship-container">
+            <div class="internship" data-title="Internship Title 1" data-company="Company Name 1" data-duration="3 months" data-category="IT" data-location="Location 1">
+                <h3></h3>
+                <p class="company"></p>
+                <p class="location"></p>
+                <p class="duration"></p>
+                <p class="category"></p>
+                <button>Apply Now</button>
+            </div>
+            <div class="internship" data-title="Internship Title 2" data-company="Company Name 2" data-duration="6 months" data-category="Marketing" data-location="Location 2">
+                <h3></h3>
+                <p class="company"></p>
+                <p class="location"></p>
+                <p class="duration"></p>
+                <p class="category"></p>
+                <button>Apply Now</button>
+            </div>
+            <!-- Add more internship listings as needed -->
         </div>
-        <div class="internship">
-            <h3>Internship Title 2</h3>
-            <p>Company Name 2</p>
-            <p>Location 2</p>
-            <p>Duration: 6 months</p>
-            <button>Apply Now</button>
-        </div>
-        <div class="internship">
-            <h3>Internship Title 1</h3>
-            <p>Company Name 1</p>
-            <p>Location 1</p>
-            <p>Duration: 3 months</p>
-            <button>Apply Now</button>
-        </div>
-        <div class="internship">
-            <h3>Internship Title 1</h3>
-            <p>Company Name 1</p>
-            <p>Location 1</p>
-            <p>Duration: 3 months</p>
-            <button>Apply Now</button>
-        </div>
-
     </div>
-</div>
-
-
 
    <script src="{{ asset('js/homepage.js') }}"></script>
 </body>

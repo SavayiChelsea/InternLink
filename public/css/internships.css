@@ -15,8 +15,6 @@ header {
 }
 body{
     background: #fdf5fd;
-
-
 }
 
 
@@ -56,7 +54,7 @@ body{
 }
 
 .search-box input[type="text"]:hover {
-    border-color: #007bff;
+    border-color: #5900ff;
 }
 
 /* Styling the icon */
@@ -89,6 +87,26 @@ body{
     color: #aaa;
 }
 
+.autocomplete-suggestions {
+    top: 82%;
+    left: 15px;
+    width: 250px;
+    max-height: 150px;
+    overflow-y: auto;
+    background-color: #fff;
+    position: absolute;
+    z-index: 1000;
+    width: calc(100% - 20px);
+    margin-top: 5px;
+}
+.autocomplete-suggestion {
+    padding: 10px;
+    cursor: pointer;
+}
+.autocomplete-suggestion:hover {
+    background-color: #f0f0f0;
+}
+
 .internship-container {
     flex: 3;
     margin-left: 380px;
@@ -107,7 +125,7 @@ body{
     background-color: #f9f9f9;
     transition: box-shadow 0.3s ease;
     width: 900px;
-    height: 180px;
+    height: 210px;
 }
 
 .internship:hover {
@@ -150,14 +168,28 @@ body{
         margin: 20px 0;
     }
 
+    .search-box input[type="text"] {
+        width: 100%;
+    }
+    
     .internship-container {
         margin-left: 0;
+    }
+
+    .autocomplete-suggestions {
+        width: calc(100% - 40px);
+        left: 10px;
     }
 }
 
 @media (max-width: 768px) {
     .search-box input[type="text"] {
         width: 100%;
+    }
+
+    .autocomplete-suggestions {
+        width: calc(100% - 20px);
+        left: 0;
     }
 }
 
@@ -169,5 +201,10 @@ body{
     .internship button {
         padding: 8px 12px;
         font-size: 14px;
+    }
+
+    .autocomplete-suggestions {
+        width: calc(100% - 20px);
+        left: 0;
     }
 }
