@@ -12,7 +12,7 @@
         <div class="forms-container">
             <div class="signin-signup">
                 <!-- Sign In Form -->
-                <form method="POST" action="{{ route('login') }}" class="sign-in-form ">
+                <form method="POST" action="{{ route('login') }}" class="sign-in-form">
                     @csrf
                     <h2 class="title">Sign in</h2>
                     <x-validation-errors class="mb-4" />
@@ -48,9 +48,9 @@
                 </form>
 
                 <!-- Sign Up Form -->
-                <form method="POST" action="{{ route('register') }}" class="sign-up-form active ">
+                <form method="POST" action="{{ route('register') }}" class="sign-up-form">
                     @csrf
-                    <h2 class="title">Employer Sign up</h2>
+                    <h2 class="title">Sign up</h2>
                     <x-validation-errors class="mb-4" />
 
                     <div class="input-field">
@@ -141,6 +141,6 @@
         </div>
     </div>
 
-    <script src="{{ asset('js/signup.js') }}"></script>
+    <script src="{{ asset('js/signin.js') }}"></script>
 </body>
 </html>
