@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+
+
 class HomeController extends Controller
 {
     public function internships()
@@ -20,6 +22,7 @@ class HomeController extends Controller
     {
         return view('auth.signin');
     }
+
 
 
 }
