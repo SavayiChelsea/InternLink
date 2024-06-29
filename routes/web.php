@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LockScreenController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -31,3 +33,5 @@ Route::get('/signin', [App\Http\Controllers\HomeController::class, 'signin'])->n
 //register
 Route::get('/register', [App\Http\Controllers\HomeController::class, 'register'])->name('register');
 
+//Admin view
+Route::get('/home',[AdminController::class,'index']);
