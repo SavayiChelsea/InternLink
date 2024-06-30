@@ -11,11 +11,26 @@
                 </div>
 
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+
+                {{-- <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                </div> --}}
+
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    @if(Auth::user()->role == '1')
+                        <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                            {{ __('Dashboard') }}
+                        </x-nav-link>
+                    @else
+                        <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('admin.home')">
+                            {{ __('Dashboard') }}
+                        </x-nav-link>
+                    @endif
                 </div>
+
+
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ms-6">
@@ -98,6 +113,10 @@
                                 {{ __('Manage Account') }}
                             </div>
 
+                            <x-dropdown-link href="{{ route('home') }}">
+                                {{ __('Home page') }}
+                            </x-dropdown-link>
+
                             <x-dropdown-link href="{{ route('profile.show') }}">
                                 {{ __('Profile') }}
                             </x-dropdown-link>
@@ -117,11 +136,6 @@
 
                             <div class="border-t border-gray-200 dark:border-gray-600"></div>
 
-
-
-                            <x-dropdown-link href="{{ route('home') }}">
-                                {{ __('home page') }}
-                            </x-dropdown-link>
 
                             <div class="border-t border-gray-200 dark:border-gray-600"></div>
 
