@@ -1,7 +1,5 @@
 # InternLink: A website that connects Kenyan University students with Internship Opportunities
 ## Introduction
-# internLink
-
 internLink is a web platform designed to connect university students with valuable internship opportunities. It facilitates a seamless interaction between students looking for internships and employers offering them.
 
 ## Features
@@ -31,7 +29,7 @@ internLink is a web platform designed to connect university students with valuab
 
 1. **Clone the repository**:
     ```sh
-    git clone https://github.com/your-username/internLink.git
+    git clone https://github.com/SavayiChelsea/InternLink.git
     cd internLink
     ```
 
